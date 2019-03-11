@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Seeking Interaction</title>
+  </head>
+  <body>
+    <h1>Seeking Interaction: <a href="https://ourworldindata.org/grapher/life-satisfaction-vs-life-expectancy">Life Satifaction vs Life Expectancy</a></h1>
+    <h2>How the visual shows interactivity</h2>
+    <p>When you hover over a country's circle...</p>
+    <ol>
+      <li>All other country circles turn gray and show low opacity.</li>
+      <li>Those countries' text identifiers turn a similar gray, and show a similar low opacity.</li>
+      <li>The continent labels on the side that are NOT the continent of the selected circle show a similar fading technique.</li>
+      <li>Some data is shown on the side, including country name, X axis position, and Y axis position.</li>
+    </ol>
+    <h2>How I would "d3" it</h2>
+    <p>I would...</p>
+    <ul>
+      <li>When initially feeding in the data, ensure that all circles contain an ID corresponding to their country name, like so:</li>
+      <code>.attr("id", function(d){return d.countryName});</code>
+    </ul>
+
+  </body>
+</html>
