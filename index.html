@@ -48,9 +48,7 @@
                return 0.2
              };
            });
-
-      </code>
-      </pre>
+      </code></pre>
       <li>That satisfies 1 and 2. But what about 3? I would also make sure that my data included a "continent" property, and add that to each circle like so:</li>
       <code>.attr("class", function(d){return d.continent});</code>
       <li>I would then use similar code to diminish the elements. However, this time I would select rectangles, not circles. When adding those rectangles initially, I would also give them the class corresponding to their continent, for easier selection.</li>
