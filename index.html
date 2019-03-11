@@ -12,7 +12,6 @@
       <li>All other country circles turn gray and show low opacity.</li>
       <li>Those countries' text identifiers turn a similar gray, and show a similar low opacity.</li>
       <li>The continent labels on the side that are NOT the continent of the selected circle show a similar fading technique.</li>
-      <li>Some data is shown on the side, including country name, X axis position, and Y axis position.</li>
     </ol>
     <h2>How I would "d3" it</h2>
     <p>I would...</p>
@@ -51,6 +50,9 @@
 
       </code>
       </pre>
+      <li>That satisfies 1 and 2. But what about 3? I would also make sure that my data included a "continent" property, and add that to each circle like so:</li>
+      <code>.attr("class", function(d){return d.continent});</code>
+      <li>I would then use similar code to diminish the elements. However, this time I would select rectangles, not circles. When adding those rectangles initially, I would also give them the class corresponding to their continent, for easier selection.</li>
     </ul>
   </body>
 </html>
