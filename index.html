@@ -17,10 +17,40 @@
     <h2>How I would "d3" it</h2>
     <p>I would...</p>
     <ul>
-      <li>When initially feeding in the data, ensure that all circles contain an ID corresponding to their country name, like so:</li>
+      <li>When initially feeding in the data, ensure that all circles and text contain a class corresponding to their country name, like so:</li>
       <code>.attr("id", function(d){return d.countryName});</code>
       <li>Implement a CSS selector that activates a function in my JavaScript when a circle is hovered over, like so:</li>
       <code>circle:hover {selectFunction("id")}</code>
+      <li>Have my selectFunction turn each circle and text gray as well as diminish their opacity if and only if their id is NOT the returned country name. Like so:</li>
+      <pre><code>
+        svg.selectAll("circle")
+           .data(dataset)
+           .attr("fill", function(d){
+             if (id != ChosenId) { // ChosenId is the ID that selectFunction receives.
+                return gray
+              };
+          })
+          .attr("opacity", function(d){
+             if (id != ChosenId) {
+               return 0.2
+             };
+          });
+
+        svg.selectAll("text")
+           .data(dataset)
+           .attr("fill",function(d){
+             if (id ! = ChosenId) {
+               return gray
+             };
+           })
+           .attr("opacity",function(d){
+             if (id ! ChosenId) {
+               return 0.2
+             };
+           });
+
+      </code>
+      </pre>
     </ul>
   </body>
 </html>
