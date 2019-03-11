@@ -1,13 +1,13 @@
 body {
-  /* background-color: #B1A296; */
+  background-color: #272727;
   font-family: sans-serif;
-  color: #5D5C61;
+  color: #747474;
 }
 
 h1, h2 {
-  color: #557A95;
+  color: #ff652f;
 }
 
 code {
-  color: #379683;
+  color: #14a76c;
 }
