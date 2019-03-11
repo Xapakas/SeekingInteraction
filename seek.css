@@ -8,6 +8,10 @@ h1, h2 {
   color: #ff652f;
 }
 
+h1 {
+  text-align: center;
+}
+
 code {
   color: #14a76c;
 }
@@ -15,4 +19,5 @@ code {
 p {
   color: #ffe400;
 }
+
 
